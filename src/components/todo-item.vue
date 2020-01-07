@@ -33,14 +33,14 @@ export default {
   methods: {
     /**
      * Passing the Id of the Todo to mark it as completed or remove the mark
-     * @return {[Boolean]}  True if it was a successful operation
+     * @return {Boolean}  True if it was a successful operation
      */
     toggleComplete() {
       return todosController.toggleCompleteTodo(this.todo.id)
     },
     /**
      * Passing the Id of the Todo to remove it
-     * @return {[Boolean]}  True if it was a successful operation
+     * @return {Boolean}  True if it was a successful operation
      */
     removeToDo() {
       return todosController.removeTodo(this.todo.id)

@@ -20,7 +20,7 @@ export default {
   computed: {
     /**
      * Fetching Todo list from vuex and storing it in getTodos variable
-     * @return {[array]} List of All Todos
+     * @return {Array} List of All Todos
      */
     getTodos() {
       return todosController.getTodos()

@@ -20,7 +20,7 @@ export default {
   methods: {
     /**
      * Passing the title of a new Todo to addTodo in the todosController
-     * @return {[boolean]} True if it was a successful Operation
+     * @return {boolean} True if it was a successful Operation
      */
     submitToDo() {
       if(this.title.length){

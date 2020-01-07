@@ -12,7 +12,7 @@ const getTodos = () => {
 
 /**
  * addTodo Function to add new Todos
- * @param  title The title of the Todo
+ * @param  title {string} The title of the Todo
  * @return       true if it was a successful operation
  */
 const addTodo = async (title: string) => {
@@ -26,7 +26,7 @@ const addTodo = async (title: string) => {
 
 /**
  * removeTodo Function to remove Todos
- * @param  id Unique Todo Identifier
+ * @param  id {number} Unique Todo Identifier
  * @return    True
  */
 const removeTodo = async (id: number) => {
@@ -36,7 +36,7 @@ const removeTodo = async (id: number) => {
 
 /**
  * Function to modify a Todo into completed or not
- * @param  id Unique Todo Identifier
+ * @param  id {number} Unique Todo Identifier
  * @return    True if It was a successful operation
  */
 const toggleCompleteTodo = async (id: number) => {
