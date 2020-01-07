@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import todosController from '@/controllers/todosController'
 
 export default {
   data() {
@@ -18,13 +18,18 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['addTodo']),
+    /**
+     * Passing the title of a new Todo to addTodo in the todosController
+     * @return {[boolean]} True if it was a successful Operation
+     */
     submitToDo() {
-      if(this.title.length)
-        this.addTodo(this.title)
-      else
-        return alert('please enter a title !')
-      this.title = ''
+      if(this.title.length){
+         todosController.addTodo(this.title);
+         this.title = '';
+         return true;
+    } else
+        return alert('please enter a title !');
+
     }
   }
 }

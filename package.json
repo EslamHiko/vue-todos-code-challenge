@@ -30,7 +30,8 @@
     "typescript": "~3.5.3",
     "vue-cli-plugin-axios": "^0.0.4",
     "vue-cli-plugin-vuetify": "^0.1.6",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vuex-orm-decorators": "^1.1.7"
   },
   "eslintConfig": {
     "root": true,

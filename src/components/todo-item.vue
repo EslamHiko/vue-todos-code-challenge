@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import todosController from '@/controllers/todosController'
 
 export default {
   props: {
@@ -31,14 +31,19 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['removeTodo'
-  ,'toggleCompleteTodo']),
-    toggleComplete(e) {
-      this.toggleCompleteTodo(this.index)
+    /**
+     * Passing the Id of the Todo to mark it as completed or remove the mark
+     * @return {[Boolean]}  True if it was a successful operation
+     */
+    toggleComplete() {
+      return todosController.toggleCompleteTodo(this.todo.id)
     },
-    removeToDo(e) {
-      this.removeTodo(this.index)
-
+    /**
+     * Passing the Id of the Todo to remove it
+     * @return {[Boolean]}  True if it was a successful operation
+     */
+    removeToDo() {
+      return todosController.removeTodo(this.todo.id)
     }
   }
 }
